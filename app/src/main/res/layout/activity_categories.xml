@@ -24,6 +24,7 @@
             android:id="@+id/foodsbtn"
             android:layout_width="209dp"
             android:layout_height="72dp"
+            android:onClick="onclkfoods"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/roundbtn"
             android:text="Foods"
@@ -38,6 +39,7 @@
             android:background="@drawable/roundbtn"
             android:layout_marginVertical="16dp"
             android:text="Drinks"
+            android:onClick="onclkdrinks"
             android:textColor="#fcfcfc"
             android:textSize="24dp" />
     </LinearLayout>
