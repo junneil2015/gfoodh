@@ -23,10 +23,11 @@
         <Button
             android:id="@+id/Startbtn"
             android:layout_marginTop="50dp"
+            android:onClick="onclkstart"
             android:layout_width="209dp"
             android:layout_height="72dp"
             android:layout_gravity="center_horizontal"
-            android:background="#F4511E"
+            android:background="@drawable/roundbtn"
             android:text="Start"
             android:textColor="#fcfcfc"
             android:textSize="24dp" />

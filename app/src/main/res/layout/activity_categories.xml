@@ -4,7 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".CategoriesActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textAlignment="center"
+        android:layout_marginTop="40dp"
+        android:text="CATEGORIES" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/foodsbtn"
+            android:layout_width="209dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/roundbtn"
+            android:text="Foods"
+            android:textColor="#fcfcfc"
+            android:textSize="24dp" />
+
+        <Button
+            android:id="@+id/drinksbtn"
+            android:layout_width="209dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/roundbtn"
+            android:layout_marginVertical="16dp"
+            android:text="Drinks"
+            android:textColor="#fcfcfc"
+            android:textSize="24dp" />
+    </LinearLayout>
+
 
 
 </LinearLayout>
