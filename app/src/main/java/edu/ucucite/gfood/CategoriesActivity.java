@@ -17,11 +17,13 @@ public class CategoriesActivity extends AppCompatActivity {
 
     public void onclkdrinks(View view) {
         Intent intent = new Intent(CategoriesActivity.this, LevelsActivity.class);
+        intent.putExtra("category", "drinks");
         startActivity(intent);
     }
 
     public void onclkfoods(View view) {
         Intent intent = new Intent(CategoriesActivity.this, LevelsActivity.class);
+        intent.putExtra("category", "foods");
         startActivity(intent);
     }
 }
