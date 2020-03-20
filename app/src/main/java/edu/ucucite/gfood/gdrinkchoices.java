@@ -31,7 +31,7 @@ public class gdrinkchoices {
     }
 
     public String getchoice4(int index){
-        String choice[] = {"Latte", "Fresh Milk", "Frshmilk","Soda", "Soju", "Milk syrup", "Soju",  "Soju", "Sea breeze", "Tea"};
+        String choice[] = {"Latte", "Fresh Milk", "Fresh milk","Soda", "Soju", "Milk syrup", "Soju",  "Soju", "Sea breeze", "Tea"};
         return choice[index - 1];
     }
 

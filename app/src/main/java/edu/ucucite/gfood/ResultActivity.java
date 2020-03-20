@@ -11,6 +11,7 @@ import android.widget.ImageView;
 public class ResultActivity extends AppCompatActivity {
     ImageView resultstatus;
     Button contbtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,15 +24,18 @@ public class ResultActivity extends AppCompatActivity {
         resultstatus.setImageResource(bundle_to_res.getInt("imgchk"));
         contbtn = findViewById(R.id.contbtn);
         final int nextqnum = bundle_to_res.getInt("qnum") + 1;
+        final String category = bundle_to_res.getString("category");
 
         contbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             Intent intent = new Intent(ResultActivity.this, QuestionActivity.class);
-            Bundle bundle = new Bundle();
-            bundle.putInt("qnum", nextqnum);
-              intent.putExtras(bundle);
-              startActivity(intent);
+                Intent intent = new Intent(ResultActivity.this, QuestionActivity.class);
+                Bundle bundle = new Bundle();
+
+                bundle.putInt("qnum", nextqnum);
+                intent.putExtra("category", category);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
 
