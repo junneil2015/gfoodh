@@ -17,9 +17,11 @@ public class CategoriesActivity extends AppCompatActivity {
 
     public void onclkdrinks(View view) {
         Intent intent = new Intent(CategoriesActivity.this, LevelsActivity.class);
+        startActivity(intent);
     }
 
     public void onclkfoods(View view) {
         Intent intent = new Intent(CategoriesActivity.this, LevelsActivity.class);
+        startActivity(intent);
     }
 }

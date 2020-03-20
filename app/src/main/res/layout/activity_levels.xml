@@ -1,9 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LevelsActivity">
+    tools:context=".LevelsActivity"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LEVELS"
+        android:padding="40dp"
+        android:textAlignment="center"
+        android:textSize="32dp"/>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/lvl1"
+                android:layout_height="wrap_content"
+                android:textColor="#fcfcfc"
+                android:onClick="onclklvl1"
+                android:textSize="24dp"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:layout_weight="1"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/lvl2"
+                android:layout_height="wrap_content"
+                android:textColor="#fcfcfc"
+                android:onClick="onclklvl2"
+                android:textSize="24dp"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:layout_weight="1"
+                android:text="2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/lvl3"
+                android:layout_height="wrap_content"
+                android:textColor="#fcfcfc"
+                android:onClick="onclklvl3"
+                android:textSize="24dp"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:layout_weight="1"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/lvl4"
+                android:layout_height="wrap_content"
+                android:textColor="#fcfcfc"
+                android:onClick="onclklvl4"
+                android:textSize="24dp"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:layout_weight="1"
+                android:text="4" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/lvl5"
+                android:layout_height="wrap_content"
+                android:textColor="#fcfcfc"
+                android:onClick="onclklvl5"
+                android:textSize="24dp"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:layout_weight="1"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/lvl6"
+                android:layout_height="wrap_content"
+                android:textColor="#fcfcfc"
+                android:onClick="onclklvl6"
+                android:textSize="24dp"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:layout_weight="1"
+                android:text="6" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/lvl7"
+                android:layout_height="wrap_content"
+                android:textColor="#fcfcfc"
+                android:onClick="onclklvl7"
+                android:layout_margin="10dp"
+                android:textSize="24dp"
+                android:background="@color/colorPrimary"
+                android:layout_weight="1"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/lvl8"
+                android:layout_height="wrap_content"
+                android:textColor="#fcfcfc"
+                android:onClick="onclklvl8"
+                android:layout_margin="10dp"
+                android:textSize="24dp"
+                android:background="@color/colorPrimary"
+                android:layout_weight="1"
+                android:text="8" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="205dp">
+
+            <Button
+                android:id="@+id/lvl9"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="onclklvl9"
+                android:text="9"
+                android:textColor="#fcfcfc"
+                android:textSize="24dp" />
+
+            <Button
+                android:id="@+id/lvl10"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="onclklvl10"
+                android:text="10"
+                android:textColor="#fcfcfc"
+                android:textSize="24dp" />
+        </TableRow>
+
+
+    </TableLayout>
+
+
+</LinearLayout>
