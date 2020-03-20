@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -15,15 +16,17 @@ public class QuestionActivity extends AppCompatActivity {
     ImageView foodimg;
     TextView lvlnum;
     Button choice1, choice2, choice3, choice4;
+    private gfoodchoices gfoodchoices = new gfoodchoices();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
-        Intent intent =  getIntent();
+        Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
 
-        String qans = bundle.get("qans").toString();
-        int qnum = bundle.getInt("qnum");
+
+        final int qnum = bundle.getInt("qnum");
+        String qans = gfoodchoices.getcorrans(qnum);
 
         foodimg = findViewById(R.id.foodimg);
         choice1 = findViewById(R.id.choice1);
@@ -33,23 +36,64 @@ public class QuestionActivity extends AppCompatActivity {
         lvlnum = findViewById(R.id.lvlname);
 
         lvlnum.setText("LEVEL " + qnum);
-        foodimg.setImageResource(bundle.getInt("image"));
-        choice1.setText(bundle.get("choice1").toString());
-        choice2.setText(bundle.get("choice2").toString());
-        choice3.setText(bundle.get("choice3").toString());
-        choice4.setText(bundle.get("choice4").toString());
+        foodimg.setImageResource(gfoodchoices.getimg(qnum));
+        choice1.setText(gfoodchoices.getchoice1(qnum));
+        choice2.setText(gfoodchoices.getchoice2(qnum));
+        choice3.setText(gfoodchoices.getchoice3(qnum));
+        choice4.setText(gfoodchoices.getchoice4(qnum));
+
+        choice1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String myans = gfoodchoices.getchoice1(qnum);
+               submitans(qnum, myans);
+           //     Toast.makeText(QuestionActivity.this, "1", Toast.LENGTH_SHORT).show();
+             //   Intent intent_to_res = new Intent(QuestionActivity.this, ResultActivity.class);
+               /// startActivity(intent_to_res);
+
+
+            }
+        });
+
+        choice2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String myans = gfoodchoices.getchoice2(qnum);
+                submitans(qnum, myans);
+            }
+        });
+
+        choice3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String myans = gfoodchoices.getchoice3(qnum);
+                submitans(qnum, myans);
+            }
+        });
+
+        choice4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String myans = gfoodchoices.getchoice4(qnum);
+                submitans(qnum, myans);
+            }
+        });
 
     }
 
-    public void choice1(View view) {
-    }
 
-    public void choice2(View view) {
-    }
+    public void submitans(int qnum, String myans) {
+        Intent intent_to_res = new Intent(QuestionActivity.this, ResultActivity.class);
+        Bundle bundle_res = new Bundle();
 
-    public void choice3(View view) {
-    }
-
-    public void choice4(View view) {
+        if (gfoodchoices.getcorrans(qnum).equals(myans)){
+            bundle_res.putInt("imgchk", R.drawable.ic_check_circle);
+            bundle_res.putInt("qnum", qnum);
+        }else{
+            bundle_res.putInt("imgchk", R.drawable.ic_cancel);
+            bundle_res.putInt("qnum", qnum);
+        }
+        intent_to_res.putExtras(bundle_res);
+        startActivity(intent_to_res);
     }
 }

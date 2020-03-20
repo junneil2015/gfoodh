@@ -29,7 +29,7 @@
             android:background="@drawable/roundbtn"
             android:text="Foods"
             android:textColor="#fcfcfc"
-            android:textSize="24dp" />
+            android:textSize="16dp" />
 
         <Button
             android:id="@+id/drinksbtn"
@@ -41,7 +41,7 @@
             android:text="Drinks"
             android:onClick="onclkdrinks"
             android:textColor="#fcfcfc"
-            android:textSize="24dp" />
+            android:textSize="16dp" />
     </LinearLayout>
 
 
